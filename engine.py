@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 @st.cache_resource
 def load_model():
     try:
-        model = keras.models.load_model()  # Model path
+        model = keras.models.load_model(https://drive.google.com/file/d/1NebNcN05POwTphZrIHMaF-1BOoIzBSV8/view?usp=drive_link)  # Model path
         return model
     except Exception as e:
         st.error(f"Error loading model: {e}")
