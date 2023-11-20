@@ -3,12 +3,24 @@ import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 from PIL import Image
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+import gdown
+import os
 
 @st.cache_resource
 def load_model():
     try:
-        model = keras.models.load_model(https://drive.google.com/file/d/1NebNcN05POwTphZrIHMaF-1BOoIzBSV8/view?usp=sharing)  # Model path
+        # Google Drive link for the model
+        google_drive_link = 'https://drive.google.com/file/d/1NebNcN05POwTphZrIHMaF-1BOoIzBSV8/view?usp=drive_link'
+        # Path to save the downloaded model
+        model_path = 'model.h5'
+
+        # Check if the model is already downloaded
+        if not os.path.isfile(model_path):
+            # Download the model from Google Drive
+            gdown.download(google_drive_link, model_path, quiet=False)
+
+        # Load the model
+        model = keras.models.load_model(model_path)
         return model
     except Exception as e:
         st.error(f"Error loading model: {e}")
@@ -40,5 +52,3 @@ if uploaded_image is not None:
             st.write(f'Prediction: {predicted_class} (Confidence: {confidence_score:.2f}%)')
     except Exception as e:
         st.error(f"Error processing image: {e}")
-
-
