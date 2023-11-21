@@ -10,7 +10,7 @@ import os
 def load_model():
     try:
         # Google Drive link for the model
-        google_drive_link = 'https://drive.google.com/file/d/1NebNcN05POwTphZrIHMaF-1BOoIzBSV8/view?usp=drive_link'
+        google_drive_link = ''
         # Path to save the downloaded model
         model_path = 'model.h5'
 
