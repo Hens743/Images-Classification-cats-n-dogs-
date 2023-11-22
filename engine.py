@@ -4,16 +4,8 @@ from tensorflow import keras
 import numpy as np
 from PIL import Image
 
-@st.cache_resource
-def load_model():
-    try:
-        model = keras.models.load_model("data/pruned_model.keras" )  # Model path 
-        return model
-    except Exception as e:
-        st.error(f"Error loading model: {e}")
-        return None
-
-model = load_model()
+    
+model = load_model('data/pruned_model.keras)
 
 class_names = ['Cat', 'Dog']  # Model's classes
 
