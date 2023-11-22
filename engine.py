@@ -1,6 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 from tensorflow import keras
+from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
 
@@ -26,7 +27,7 @@ if uploaded_image is not None:
     
     try:
         image = Image.open(uploaded_image)
-        image = image.resize((100, 100))  # Adjust size as needed
+        image = image.resize((100, 100))  
         image = np.array(image)
         image = image / 255.0  # Normalize
 
