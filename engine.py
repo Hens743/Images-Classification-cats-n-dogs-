@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 # Load the model
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_model():
     return tf.keras.models.load_model('data/pruned_model.keras')
 
