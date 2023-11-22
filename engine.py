@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
     
-model = load_model('data/pruned_model.keras)
+model = load_model('data/pruned_model.keras')
 
 class_names = ['Cat', 'Dog']  # Model's classes
 
