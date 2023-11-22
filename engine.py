@@ -3,7 +3,6 @@ import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 from PIL import Image
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 @st.cache_resource
 def load_model():
