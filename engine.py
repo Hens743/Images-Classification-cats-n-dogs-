@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 
 @st.cache_resource
-def load_model():
+def custom_model():
     try:
         model = tf.keras.models.load_model('data/pruned_model_last.keras')  # Model path
         return model
@@ -14,7 +14,7 @@ def load_model():
         st.error(f"Error loading model: {e}")
         return None
 
-model = load_model()
+model = custom_model()
 
 class_names = ['Cat', 'Dog']  # Model's classes
 
