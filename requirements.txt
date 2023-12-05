@@ -3,3 +3,5 @@ tensorflow==2.15.0
 numpy==1.26.2
 Pillow==10.0.1
 pip==23.3.1
+cuda-python
+TF-TRT
