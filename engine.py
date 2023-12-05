@@ -8,7 +8,7 @@ from PIL import Image
 @st.cache_resource
 def custom_model():
     try:
-        model = tf.keras.models.load_model('data/original_model_20231122-201315.keras')  # Model path
+        model = load_model('data/original_model_20231122-201315.keras')  # Model path tf.keras.models.
         return model
     except Exception as e:
         st.error(f"Error loading model: {e}")
